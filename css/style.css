@@ -1,0 +1,117 @@
+* {
+    color: red;
+}
+
+/* selektor łączony */
+div.connected p {
+    color: green;
+}
+
+/* before after */
+div.connected p::before {
+    content: '123456 ';
+    color: yellow;
+}
+
+div.connected p::after {
+    content: '7890';
+    color: yellow;
+}
+
+/* pseudoklasy */
+.hover a {
+    color: green;
+    text-decoration: none;
+}
+
+.hover a:hover {
+    color: red;
+}
+
+form input:focus {
+    border: 2px solid brown;
+    outline: 0;
+}
+
+ul li:first-child {
+    color: violet;
+}
+
+ul li:last-child {
+    color: aqua;
+}
+
+/* ul li:nth-of-type(3) {
+    color: orange;
+}
+
+ul li:nth-of-type(even) {
+    color: orange;
+} */
+
+/* ul li:nth-of-type(3n + 2) {
+    color: orange;
+} */
+
+ul li:nth-last-of-type(even) {
+    color: orange;
+}
+
+/* selektory atrybutów */
+input[title] {
+    border: 2px solid violet;
+}
+
+/* z konkretną wartością */
+input[title="piaty"]{
+    border: 2px solid aqua;
+}
+
+/* sprawdza czy występuje string */
+input[title~="input"] {
+    border: 2px solid orange;
+}
+
+/* czy zawiera ciąg znaków */
+input[title*="pi"] {
+    border: 2px solid black;
+}
+
+/* rozpoczyna się na ciąg znaków */
+input[title^="pierw"] {
+    border: 2px solid grey;
+}
+
+/* kończy sie na ciąg znaków */
+input[title$="ni"] {
+    border: 2px solid violet;
+}
+
+.relative {
+    position: relative;
+}
+
+.orange,
+.grey {
+    height: 300px;
+}
+
+.orange {
+    background-color: orange;
+    position: absolute; 
+    left: 60px;
+    top: 100px;
+}
+
+.grey {
+    background-color: grey;
+}
+
+#main-nav {
+    position: sticky;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+}
